@@ -1,8 +1,10 @@
----
-heading: Test of the test
-desc: Description
----
-
+<!-- CUSTOM_DATA
+{
+  "project": "Awesome Tool",
+  "status": "beta",
+  "config": {"env": "production"}
+}
+-->
 # Test of the test
 
 Description
