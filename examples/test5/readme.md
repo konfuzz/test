@@ -1,5 +1,6 @@
 ---
-wtf
+heading: Test of the test
+desc: Description
 ---
 
 # Test of the test
