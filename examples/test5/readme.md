@@ -12,3 +12,9 @@ Description
 ---
 
 This is the paragraph.
+
+[//]: # (CUSTOM_DATA_START)
+```json
+{
+  "key": "value"
+}
