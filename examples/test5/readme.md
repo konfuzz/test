@@ -13,4 +13,6 @@ Description
 
 This is the paragraph.
 
-%% test %%
+<div hidden id="custom-data">
+  {"key": "value"}
+</div>
