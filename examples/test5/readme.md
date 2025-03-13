@@ -13,6 +13,4 @@ Description
 
 This is the paragraph.
 
-<div hidden id="custom-data">
-  {"key": "value"}
-</div>
+test
