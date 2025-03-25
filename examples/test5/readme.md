@@ -11,6 +11,5 @@ Description
 
 ---
 
-This is the paragraph hahaha. lol
-
+This is the paragraph
 test333
