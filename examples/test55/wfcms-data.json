@@ -1,4 +1,5 @@
 {
+  "name": "test55",
   "framework": "Next.js",
   "usecase": "Starter, Blog",
   "auth": "NextAuth.js",
