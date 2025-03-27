@@ -1,6 +1,7 @@
 {
-  "framework": "Next.js",
+  "name": "test53232",
   "description": "test of the test",
+  "framework": "Next.js",
   "usecase": "Starter, Blog",
   "auth": "NextAuth.js",
   "database": "Postgress",
