@@ -1,5 +1,5 @@
 {
-  "description": "WFCMS test case",
+  "description": "WFCMS test case LLL",
   "framework": "Nuxt.js",
   "usecase": "E-commerce, CMS",
   "auth": "Clerk",

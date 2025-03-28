@@ -1,4 +1,4 @@
-# CoAgents Travel
+# CoAgents Travel NEW
 
 This example contains a Travel Planner application with search capabilities using CoAgents.
 
