@@ -1,9 +1,9 @@
 {
-  "description": "WFCMS test case",
+  "description": "Example setup",
   "framework": "Vue.js",
-  "usecase": "Dashboard, Analytics",
-  "auth": "NextAuth.js",
-  "database": "SQLite",
+  "usecase": "E-commerce, CMS",
+  "auth": "Clerk",
+  "database": "MongoDB",
   "css": "Vanilla CSS",
   "video": "http://www.youtube.com/watch?v=0b6BVqPwqA0",
   "example_link": "https://examples-coagents-research-canvas-ui.vercel.app/",

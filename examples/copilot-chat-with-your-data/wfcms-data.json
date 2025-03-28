@@ -1,8 +1,8 @@
 {
   "description": "WFCMS test case",
-  "framework": "Vue.js",
-  "usecase": "Dashboard, Analytics",
-  "auth": "NextAuth.js",
+  "framework": "Next.js",
+  "usecase": "App, PWA",
+  "auth": "Custom JWT",
   "database": "SQLite",
   "css": "Vanilla CSS",
   "video": "http://www.youtube.com/watch?v=0b6BVqPwqA0",

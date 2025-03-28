@@ -1,10 +1,10 @@
 {
   "description": "WFCMS test case",
-  "framework": "Vue.js",
-  "usecase": "Dashboard, Analytics",
-  "auth": "NextAuth.js",
-  "database": "SQLite",
-  "css": "Vanilla CSS",
+  "framework": "Nuxt.js",
+  "usecase": "E-commerce, CMS",
+  "auth": "Clerk",
+  "database": "DynamoDB",
+  "css": "Bootstrap",
   "video": "http://www.youtube.com/watch?v=0b6BVqPwqA0",
   "example_link": "https://examples-coagents-research-canvas-ui.vercel.app/",
   "cover_img": "https://picsum.photos/1000"
