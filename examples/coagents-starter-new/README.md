@@ -1,4 +1,4 @@
-# CoAgents Starter NEW
+# CoAgents Starter NEWEST
 
 This example contains a simple starter project which includes two different agents, one written in Python and one in JavaScript.
 
