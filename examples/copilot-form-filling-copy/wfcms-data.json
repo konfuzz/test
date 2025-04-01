@@ -1,0 +1,12 @@
+{
+  "title": "Copilot Form Filling",
+  "description": "Prototype showcase NEWNEW",
+  "framework": "Vue.js",
+  "usecase": "Dashboard, Analytics",
+  "auth": "Clerk",
+  "database": "PostgreSQL",
+  "css": "Vanilla CSS",
+  "video": "http://www.youtube.com/watch?v=0b6BVqPwqA0",
+  "example_link": "https://examples-coagents-research-canvas-ui.vercel.app/",
+  "cover_img": "https://picsum.photos/1000"
+}
