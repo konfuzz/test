@@ -1,4 +1,5 @@
-{
+{ 
+  "title": "Coagents Starter",
   "description": "WFCMS test case LLL",
   "framework": "Nuxt.js",
   "usecase": "E-commerce, CMS",

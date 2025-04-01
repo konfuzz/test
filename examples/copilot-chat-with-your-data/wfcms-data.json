@@ -1,4 +1,5 @@
 {
+  "title": "Copilot Chat with Your Data",
   "description": "WFCMS test case",
   "framework": "Next.js",
   "usecase": "App, PWA",

@@ -1,4 +1,5 @@
 {
+  "title": "Coagents Travel",
   "description": "WFCMS test case",
   "framework": "Next.js",
   "usecase": "App, PWA",
