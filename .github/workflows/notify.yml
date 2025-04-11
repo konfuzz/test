@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'Examples/**/README.md'
-      - 'examples/**/readme.md' # если пути бывают в нижнем регистре
+      - 'examples/**/readme.md'
 
 jobs:
   notify:
@@ -14,7 +14,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2  # 💡 важно: нужно больше чем 1, чтобы git diff работал
+          fetch-depth: 2
 
       - name: Get changed files
         id: changes
@@ -29,14 +29,14 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           CHANGES=$(git diff --name-status HEAD^ HEAD | grep -i 'examples/.*/readme.md' || true)
-          MESSAGE="📁 Обновления в Examples/README.md:%0A"
+          MESSAGE="📁 Updates in Examples:%0A"
           while read -r line; do
             STATUS=$(echo "$line" | awk '{print $1}')
             FILE=$(echo "$line" | awk '{print $2}')
             case $STATUS in
-              A) MESSAGE+="➕ Добавлен: $FILE%0A" ;;
-              M) MESSAGE+="✏️ Изменён: $FILE%0A" ;;
-              D) MESSAGE+="❌ Удалён: $FILE%0A" ;;
+              A) MESSAGE+="➕ Added: $FILE%0A" ;;
+              M) MESSAGE+="✏️ Edited: $FILE%0A" ;;
+              D) MESSAGE+="❌ Deleted: $FILE%0A" ;;
               *) MESSAGE+="📄 $STATUS: $FILE%0A" ;;
             esac
           done <<< "$CHANGES"
