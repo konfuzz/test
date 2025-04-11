@@ -3,7 +3,7 @@ name: Notify on README change in Examples
 on:
   push:
     paths:
-      - 'examples/**/README.md'
+      - 'examples/**/readme.md'
 
 jobs:
   notify:
