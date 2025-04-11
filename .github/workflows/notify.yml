@@ -1,10 +1,9 @@
 name: Notify on README change in Examples
 
 on:
-  push:
-    paths:
-      - 'Examples/**/README.md'
-      - 'examples/**/readme.md'
+  push: # запускается на любой пуш
+    branches:
+      - main  # или твоя ветка
 
 jobs:
   notify:
@@ -16,10 +15,10 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Get changed files
+      - name: Get changed README files
         id: changes
         run: |
-          CHANGES=$(git diff --name-status HEAD^ HEAD | grep -i 'examples/.*/readme.md' || true)
+          CHANGES=$(git diff --name-status HEAD^ HEAD | grep -iE '^Examples/.+/README\.md$' || true)
           echo "files=$CHANGES" >> "$GITHUB_OUTPUT"
 
       - name: Notify Telegram if README changed
@@ -28,15 +27,15 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          CHANGES=$(git diff --name-status HEAD^ HEAD | grep -i 'examples/.*/readme.md' || true)
-          MESSAGE="📁 Updates in Examples:%0A"
+          CHANGES=$(git diff --name-status HEAD^ HEAD | grep -iE '^Examples/.+/README\.md$' || true)
+          MESSAGE="📁 Обновления в Examples/README.md:%0A"
           while read -r line; do
             STATUS=$(echo "$line" | awk '{print $1}')
             FILE=$(echo "$line" | awk '{print $2}')
             case $STATUS in
-              A) MESSAGE+="➕ Added: $FILE%0A" ;;
-              M) MESSAGE+="✏️ Edited: $FILE%0A" ;;
-              D) MESSAGE+="❌ Deleted: $FILE%0A" ;;
+              A) MESSAGE+="➕ Добавлен: $FILE%0A" ;;
+              M) MESSAGE+="✏️ Изменён: $FILE%0A" ;;
+              D) MESSAGE+="❌ Удалён: $FILE%0A" ;;
               *) MESSAGE+="📄 $STATUS: $FILE%0A" ;;
             esac
           done <<< "$CHANGES"
