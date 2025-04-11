@@ -1,4 +1,4 @@
-# CoAgents Research Canvas Example!!!123
+# CoAgents Research Canvas Example
 
 This example demonstrates a research canvas UI.
 
