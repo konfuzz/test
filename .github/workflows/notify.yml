@@ -15,7 +15,7 @@ jobs:
       - name: Get changed files
         id: changes
         run: |
-          echo "files=$(git diff --name-status ${{ github.event.before }} ${{ github.sha }} | grep 'examples/.*/README.md')" >> "$GITHUB_OUTPUT"
+          echo "files=$(git diff --name-status ${{ github.event.before }} ${{ github.sha }} | grep 'examples/.*/readme.md')" >> "$GITHUB_OUTPUT"
 
       - name: Notify Telegram if README changed
         if: steps.changes.outputs.files != ''
@@ -23,8 +23,8 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          CHANGES=$(git diff --name-status ${{ github.event.before }} ${{ github.sha }} | grep 'examples/.*/README.md')
-          MESSAGE="📁 Обновления в Examples/README.md:%0A"
+          CHANGES=$(git diff --name-status ${{ github.event.before }} ${{ github.sha }} | grep 'examples/.*/readme.md')
+          MESSAGE="📁 Обновления в Examples/readme.md:%0A"
           while read -r line; do
             STATUS=$(echo "$line" | awk '{print $1}')
             FILE=$(echo "$line" | awk '{print $2}')
